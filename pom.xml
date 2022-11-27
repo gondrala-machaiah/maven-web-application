@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://35.154.139.230:9090/venkateshtechnologies/repository/citibank-release/</url>
+	      <url>http://13.233.196.52:9980/saitechnologies/repository/citibank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://35.154.139.230:9090/venkateshtechnologies/repository/citibank-snapshot/</url>
+	      <url>http://13.233.196.52:9980/saitechnologies/repository/citibank-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
