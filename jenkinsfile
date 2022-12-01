@@ -1,6 +1,9 @@
 node{
 def mavenHome = tool name: 'maven 3.8.5'
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+echo "the job name is:${env.JOB_NAME}"
+echo "the build number is:${env.BUILD_NUMBER}"
+echo "the node name is:${env.NODE_NAME}"
+
 //Get Code From Repo
 stage('Get Code From Repo'){
 git branch: 'development', credentialsId: '075d263e-f533-4513-9f53-4359eae1dfef', url: 'https://github.com/gondrala-machaiah/maven-web-application.git'
