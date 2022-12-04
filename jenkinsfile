@@ -31,13 +31,14 @@ stage('deploy app'){sshagent(['3de3bf88-b7a4-43dc-b070-13ebf5a1050e']) {
  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.33.230:/opt/apache-tomcat-9.0.68/webapps"
 }
 }*/
+}//tryclosing
 catch(e){
 currentBuild.result = "FAILURE"
 }
 finally{
 sendSlackNotifications(currentBuild.result)
 }
-}//tryclosing
+
 }//node closing
 def slacknotification (buildStatus = 'STARTED')
   buildStatus = buildStatus ?: 'SUCCESS'
