@@ -49,6 +49,4 @@ colorCode = '#FF0000'
 
 slackSend (color: colourCode, message: summary)
 
-}
-
 }//node closing
