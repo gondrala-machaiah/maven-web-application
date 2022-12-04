@@ -29,7 +29,7 @@ sh "${mavenHome}/bin/mvn deploy"
 stage('deploy app'){sshagent(['3de3bf88-b7a4-43dc-b070-13ebf5a1050e']) {
  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.33.230:/opt/apache-tomcat-9.0.68/webapps"
 }
-}*/
+}
 def slacknotification (buildStatus = 'STARTED')
   buildStatus = buildStatus ?: 'SUCCESS'
 
@@ -48,5 +48,6 @@ colorCode = '#FF0000'
 }
 
 slackSend (color: colourCode, message: summary)
+*/
 
 }//node closing
