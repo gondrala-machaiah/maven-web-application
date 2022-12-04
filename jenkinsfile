@@ -37,6 +37,8 @@ currentBuild.result = "FAILURE"
 finally{
 sendSlackNotifications(currentBuild.result)
 }
+}//tryclosing
+}//node closing
 def slacknotification (buildStatus = 'STARTED')
   buildStatus = buildStatus ?: 'SUCCESS'
 
@@ -56,5 +58,4 @@ colorCode = '#FF0000'
 
 slackSend (color: colourCode, message: summary)
 
-}//tryclosing
-}//node closing
+
